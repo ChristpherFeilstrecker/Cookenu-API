@@ -5,11 +5,11 @@ import { Profile, Recipe } from "../types";
 
 export async function getFeedRecipes(req: Request, res: Response): Promise<void | any> {
    try {
-
+console.log("getfeedrecipes")
       const token = req.headers.authorization as string
 
       const tokenData: any = await new Authenticator().getTokenData(token)
-
+console.log("tokendata",tokenData.id)
       if (!tokenData) {
          res.statusCode = 401
          res.statusMessage = "token invalido ou nao passado no headers"
@@ -18,15 +18,16 @@ export async function getFeedRecipes(req: Request, res: Response): Promise<void 
 
       const usersFolowed = await connection("cookenu_follow").where('follow_id', 'like', `%${tokenData.id}%`)
       const feeds: any[] = []
-
+console.log("usersfolowed",usersFolowed)
      for (let user of usersFolowed) {
       const result: any = await connection("cookenu_recipes").where('user_id', 'like', `%${user.followed_id}%`)
      
       feeds.push(result)
      }
-
-      if (!feeds.length) {
+console.log("feeds",feeds)
+      if (!feeds || feeds.length === 0) {
          res.status(204)
+         res.statusMessage ="Usuarios sem receitas cadastradas"
          throw new Error("Usuários sem receitas cadastradas")
       }
 

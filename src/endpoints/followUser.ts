@@ -34,8 +34,8 @@ export default async function followUser(
      }
      const follow_id:string = tokenData.id
      const verifyFolowersUser = await connection("cookenu_follow").where('followed_id', 'like', `%${userToFollowId}%`).where('follow_id', 'like', `%${follow_id}%`)
-
-     if (verifyExistUserToFollow.length > 0) {
+console.log("verify",verifyFolowersUser)
+     if (verifyFolowersUser.length >= 1) {
         res.statusCode = 401
         throw new Error("Você ja segue este usuário")
      }

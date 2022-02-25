@@ -15,8 +15,8 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYt
  //"token de autenticação"
 
 {
-	"title": "Nome da Receita2",
-	"description": "descrição da receita2"
+	"title": "Nome da Receita3",
+	"description": "descrição da receita3"
 }
 
 ###
@@ -28,14 +28,46 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYt
 
 ###
 
-GET   http://localhost:3003/user/:id
+GET   http://localhost:3003/user/:id 
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgwNjE4NCwiZXhwIjoxNjQ1ODkyNTg0fQ.lcRobWRCHXROvZ0EvjSZBHK9krkJziTezAixz6ItaVg
- //"token de autenticação"
 
- ###
+###
+
+GET  http://localhost:3003/recipe/:id
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgwNjE4NCwiZXhwIjoxNjQ1ODkyNTg0fQ.lcRobWRCHXROvZ0EvjSZBHK9krkJziTezAixz6ItaVg
+
+###
 
 
+###
+
+GET  http://localhost:3003/user/feed
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgxMjAyMCwiZXhwIjoxNjQ1ODk4NDIwfQ.XhRlBbwFSmZigVL8Yd1Xk5pPi5Tm03BhGjagBxBqilY
+
+###
+
+GET  http://localhost:3003/user/follow
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgwNjE4NCwiZXhwIjoxNjQ1ODkyNTg0fQ.lcRobWRCHXROvZ0EvjSZBHK9krkJziTezAixz6ItaVg
+
+{
+	"userToFollowId": "2e1735e2-796d-45e6-aca6-bbae83fb4b4d"
+}
+
+###
+
+GET  http://localhost:3003/login
+Content-Type: application/json
+
+{
+	"email": "bruno@lbn.com",
+	"password": "123456"
+}
+
+###
 
 //  GET https://example.com/comments   -->queri
 //     ?page=2
