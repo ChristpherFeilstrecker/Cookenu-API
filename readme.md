@@ -7,7 +7,7 @@
  Acesse o postman aqui 👉 [ <img src="https://comeaqui.files.wordpress.com/2011/04/garfieldbomdegarfo.gif" width="70" align="center"> ](https://documenter.getpostman.com/view/18386367/UVkjvHpB)
 
 ## Deploy no Heroku:
-//link heroku
+[https://cookenu-api-carver.herokuapp.com/]
 
 ## Desenvolvedor 🤖
 
