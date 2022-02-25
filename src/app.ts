@@ -6,8 +6,10 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.listen(process.env.PORT || 3003, ()=>{
-    console.log(`Servidor rodando na porta ${process.env.PORT}`)
+const { PORT = 3003 } = process.env
+
+app.listen(PORT , ()=>{
+    console.log(`Servidor rodando na porta ${PORT}`)
 })
 
 export default app
