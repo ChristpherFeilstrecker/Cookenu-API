@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import {AddressInfo} from 'net'
 
 const app = express()
 
@@ -8,8 +9,14 @@ app.use(cors())
 
 const { PORT = 3003 } = process.env
 
-app.listen(PORT , ()=>{
-    console.log(`Servidor rodando na porta ${PORT}`)
+const server = app.listen(PORT , ()=>{
+    if(server){
+        const address = server.address() as AddressInfo
+        console.log(`server is running on port http://localhost:${address.port}`)
+    }
+    else{
+        console.log('failure upon starting server')
+    }
 })
 
 export default app
