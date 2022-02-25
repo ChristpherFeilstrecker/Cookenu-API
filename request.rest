@@ -1,0 +1,42 @@
+POST http://localhost:3003/users/signup 
+Content-Type: application/json 
+
+{ 
+	"name": "Teste3",
+	"email": "teste3@lbn.com",
+	"password": "123456",
+    "role":"User"
+}
+###
+
+POST  http://localhost:3003/recipe
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgwNjE4NCwiZXhwIjoxNjQ1ODkyNTg0fQ.lcRobWRCHXROvZ0EvjSZBHK9krkJziTezAixz6ItaVg
+ //"token de autenticação"
+
+{
+	"title": "Nome da Receita2",
+	"description": "descrição da receita2"
+}
+
+###
+
+GET   http://localhost:3003/user/profile
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgwNjE4NCwiZXhwIjoxNjQ1ODkyNTg0fQ.lcRobWRCHXROvZ0EvjSZBHK9krkJziTezAixz6ItaVg
+ //"token de autenticação"
+
+###
+
+GET   http://localhost:3003/user/:id
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgwNjE4NCwiZXhwIjoxNjQ1ODkyNTg0fQ.lcRobWRCHXROvZ0EvjSZBHK9krkJziTezAixz6ItaVg
+ //"token de autenticação"
+
+ ###
+
+
+
+//  GET https://example.com/comments   -->queri
+//     ?page=2
+//     &pageSize=10

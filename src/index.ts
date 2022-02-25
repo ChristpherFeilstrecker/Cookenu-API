@@ -8,6 +8,7 @@ import { creatRecipe } from "./endpoints/creatRecipe"
 import followUser from "./endpoints/followUser"
 import unfollowUser from "./endpoints/unfollowUser"
 import { getFeedRecipes } from "./endpoints/getFeedRecipes"
+import { createSQLTables } from "./data/migration"
 
 
 //get
