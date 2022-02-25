@@ -10,7 +10,7 @@ export default async function followUser(
    res: Response
 ): Promise<void | any> {
    try {
-
+console.log("entrou user follow")
       const { userToFollowId } = req.body
       const token = req.headers.authorization as string
 
@@ -30,11 +30,11 @@ export default async function followUser(
 
       if (verifyExistUserToFollow.length === 0) {
         res.statusCode = 404
-        throw new Error("Usuário e ser seguido não encontrado")
+        throw new Error("Usuário a ser seguido não encontrado")
      }
      const follow_id:string = tokenData.id
      const verifyFolowersUser = await connection("cookenu_follow").where('followed_id', 'like', `%${userToFollowId}%`).where('follow_id', 'like', `%${follow_id}%`)
-console.log("verify",verifyFolowersUser)
+
      if (verifyFolowersUser.length >= 1) {
         res.statusCode = 401
         throw new Error("Você ja segue este usuário")

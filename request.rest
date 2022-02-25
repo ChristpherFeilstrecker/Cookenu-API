@@ -40,26 +40,23 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYt
 
 ###
 
-
-###
-
 GET  http://localhost:3003/user/feed
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgxMjAyMCwiZXhwIjoxNjQ1ODk4NDIwfQ.XhRlBbwFSmZigVL8Yd1Xk5pPi5Tm03BhGjagBxBqilY
 
 ###
 
-GET  http://localhost:3003/user/follow
+POST   http://localhost:3003/user/follow
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgwNjE4NCwiZXhwIjoxNjQ1ODkyNTg0fQ.lcRobWRCHXROvZ0EvjSZBHK9krkJziTezAixz6ItaVg
 
 {
-	"userToFollowId": "2e1735e2-796d-45e6-aca6-bbae83fb4b4d"
+	"userToFollowId": "0fe9a68b-1c8c-42b6-9766-79e9bc271464"
 }
 
 ###
 
-GET  http://localhost:3003/login
+POST  http://localhost:3003/login
 Content-Type: application/json
 
 {
@@ -69,6 +66,13 @@ Content-Type: application/json
 
 ###
 
-//  GET https://example.com/comments   -->queri
-//     ?page=2
-//     &pageSize=10
+POST  http://localhost:3003/user/unfollow
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjN2IzNjNhLTc4ZmYtNGZkNC05ZjU0LWZiMWJlYmI4N2JlMiIsImlhdCI6MTY0NTgwNjE4NCwiZXhwIjoxNjQ1ODkyNTg0fQ.lcRobWRCHXROvZ0EvjSZBHK9krkJziTezAixz6ItaVg
+
+{
+	"userToUnfollowId":"0fe9a68b-1c8c-42b6-9766-79e9bc271464"
+}
+
+
+###
